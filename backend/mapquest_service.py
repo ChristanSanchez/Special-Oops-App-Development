@@ -29,7 +29,13 @@ def get_route(origin, destination, unit="m", route_type="fastest"):
         "routeType": route_type
     }
 
-    response = requests.get(URL, params=params)
+    try:
+        response = requests.get(URL, params=params, timeout=10)
+    except requests.RequestException:
+        return {
+            "success": False,
+            "error": "Unable to connect to MapQuest."
+        }
 
     if response.status_code != 200:
         return {
@@ -52,7 +58,11 @@ def get_route(origin, destination, unit="m", route_type="fastest"):
     directions = []
 
     for step in maneuvers:
-        directions.append(step["narrative"])
+        directions.append({
+            "narrative": step["narrative"],
+            "distance": step["distance"],
+            "turn_type": step["turnType"]
+        })
 
     return {
         "success": True,
