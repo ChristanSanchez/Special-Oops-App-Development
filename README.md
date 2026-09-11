@@ -2,7 +2,7 @@
 
 A Python application that uses the MapQuest Directions API to retrieve and display route information between two locations.
 
-## Current Features
+## Current Project Features
 
 - Enter starting location and destination
 - Display route distance
@@ -12,6 +12,12 @@ A Python application that uses the MapQuest Directions API to retrieve and displ
 - Choose between fastest and shortest route
 - Basic input validation
 - Basic API and route error handling
+
+## Run Project
+1. Open VSCode
+2. Run "python -m pip install requests"
+3. Run "set MAPQUEST_API_KEY=5Q3qRHQWiYluBfqES1CmPOIJbVtv0Q9j
+4. Run "python main.py"
 
 ## Project Structure
 
