@@ -16,7 +16,7 @@ A Python application that uses the MapQuest Directions API to retrieve and displ
 ## Run Project
 1. Open VSCode
 2. Run "python -m pip install requests"
-3. Run "set MAPQUEST_API_KEY=5Q3qRHQWiYluBfqES1CmPOIJbVtv0Q9j
+3. Run "set MAPQUEST_API_KEY=5Q3qRHQWiYluBfqES1CmPOIJbVtv0Q9j" or "$env:MAPQUEST_API_KEY=5Q3qRHQWiYluBfqES1CmPOIJbVtv0Q9j"
 4. Run "python main.py"
 
 ## Project Structure
